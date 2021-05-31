@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/rjoella/Desktop/ft_containers/List.hpp
+memory
+-
+iterator
+-
+cstdio
+-
+
+/Users/rjoella/Desktop/ft_containers/main.cpp
+iostream
+-
+List.hpp
+/Users/rjoella/Desktop/ft_containers/List.hpp
+list
+-
+string
+-
+cmath
+-
+vector
+-
+
