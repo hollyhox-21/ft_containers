@@ -39,9 +39,12 @@ bool comparator(int first, int second)
 	return first < second;
 }
 
-bool mycomparison (double first, double second)
+bool mycomparison (int first, int second)
 { return ( int(first)<int(second) ); }
 
+size_t random_size_t(size_t min, size_t max) {
+	return (max - min) * ((((size_t) rand()) / (size_t) RAND_MAX)) + min;
+}
 //bool compare_nocase (const std::string& first, const std::string& second)
 //{
 //	unsigned int i=0;
@@ -57,6 +60,7 @@ bool mycomparison (double first, double second)
 bool compare_nocase (const int & first, const int & second) { return (first > second); }
 
 int main() {
+	srand(time(0));
 //	std::list<int>	orig;
 //	orig.push_front(11);
 //	orig.push_front(22);
@@ -155,7 +159,7 @@ int main() {
 //	std::cout << "Size of first: " << int (first.size()) << '\n';
 //	second.print_list();
 //	std::cout << "Size of second: " << int (second.size()) << '\n';
-	
+
 //---------------reverse_iterator--------------
 //==============R_begin==================
 //	ft::List<int> mylist;
@@ -394,11 +398,11 @@ int main() {
 //						 12.77, 73.35, 72.25, 15.3,  72.25 };
 //	ft::List<double> mylist (mydoubles,mydoubles+10);
 //
-//	mylist.sort();             //  2.72,  3.14, 12.15, 12.77, 12.77,
-//	// 15.3,  72.25, 72.25, 73.0,  73.35
+//	mylist.sort();             //  2.72,  3.14, 12.15, 12.77, 12.77, 15.3, 72.25, 72.25, 73.0, 73.35
+//	//
 //
-//	mylist.unique();           //  2.72,  3.14, 12.15, 12.77
-//	// 15.3,  72.25, 73.0,  73.35
+//	mylist.unique();           //  2.72,  3.14, 12.15, 12.77, 15.3, 72.25, 73.0, 73.35
+//
 //
 //	mylist.unique (same_integral_part);  //  2.72,  3.14, 12.15
 //	// 15.3,  72.25, 73.0
@@ -437,7 +441,7 @@ int main() {
 //	for (ft::List<int>::iterator it = bar.begin(); it!=bar.end(); ++it)
 //		std::cout << ' ' << *it;
 //	std::cout << '\n';
-	
+
 //=======================get_allocator===================
 //	ft::List<int> mylist;
 //	int * p;
@@ -494,45 +498,96 @@ int main() {
 //	if (b_o<c_o) std::cout << "b_o is less than c_o\n";
 //	if (c_o>b_o) std::cout << "c_o is greater than b_o\n";
 //	if (a_o<=b_o) std::cout << "a_o is less than or equal to b_o\n";
-//	if (a_o>=b_o) std::cout << "a_o is greater than or equal to b_o\n";
+//	if (a_o>=b_o) std::cout << "a_o is greater than or equal to b_o\n";}
 //----------------merge----------------
-	ft::List<double> first, second;
-
-	first.push_back (2.2);
-	first.push_back (2.9);
-	first.push_back (3.1);
-
-	second.push_back (1.4);
-	second.push_back (3.7);
-	second.push_back (7.1);
-	
+//
+//{
+//	ft::list<double> first, second;
+//
+//	first.push_back(3.1);
+//	first.push_back(2.2);
+//	first.push_back(2.9);
+//
+//	second.push_back(3.7);
+//	second.push_back(7.1);
+//	second.push_back(1.4);
+//
 //	first.sort();
 //	second.sort();
-	
-	first.merge(second);
-	
-	// (second is now empty)
-	
-	second.push_back (2.1);
-
-	first.merge(second,mycomparison);
-
-	std::cout << "first contains:";
-	for (ft::List<double>::iterator it=first.begin(); it!=first.end(); ++it)
-		std::cout << ' ' << *it;
-	std::cout << '\n';
-//	--------------------sort-------------------
-//	ft::List<int> mylist;
-//	ft::List<int>::iterator it;
-//	mylist.push_back (3);
-//	mylist.push_back (7);
-//	mylist.push_back (8);
-//	mylist.push_back (1);
-//	mylist.push_back (6);
-//	mylist.push_back (10);
-////	mylist.push_back (2);
-////	mylist.push_back (-1);
 //
+//
+//	first.merge(second);
+//
+//	second.push_back(2.1);
+//
+//	for (ft::list<double>::iterator it = first.begin(); it != first.end(); ++it)
+//		std::cout << ' ' << *it;
+//	std::cout << '\n';
+//
+//	for (ft::list<double>::iterator it = second.begin(); it != second.end(); ++it)
+//		std::cout << ' ' << *it;
+//	std::cout << '\n';
+//
+//
+//
+//	// (second is now empty)
+//
+//
+//
+//	first.merge(second, mycomparison);
+//
+//	std::cout << "m first contains:";
+//	for (ft::list<double>::iterator it = first.begin(); it != first.end(); ++it)
+//		std::cout << ' ' << *it;
+//	std::cout << '\n';
+//}
+//{
+//	std::list<double> first, second;
+//
+//	first.push_back(3.1);
+//	first.push_back(2.2);
+//	first.push_back(2.9);
+//
+//	second.push_back(3.7);
+//	second.push_back(7.1);
+//	second.push_back(1.4);
+//
+//	first.sort();
+//	second.sort();
+//
+//	first.merge(second);
+//
+//	second.push_back(2.1);
+//
+//	for (std::list<double>::iterator it = first.begin(); it != first.end(); ++it)
+//		std::cout << ' ' << *it;
+//	std::cout << '\n';
+//
+//	for (std::list<double>::iterator it = second.begin(); it != second.end(); ++it)
+//		std::cout << ' ' << *it;
+//	std::cout << '\n';
+//
+//
+//	// (second is now empty)
+//
+//
+//
+//	first.merge(second, mycomparison);
+//
+//	std::cout << "o first contains:";
+//	for (std::list<double>::iterator it = first.begin(); it != first.end(); ++it)
+//		std::cout << ' ' << *it;
+//	std::cout << '\n';
+//}
+//	--------------------sort-------------------
+//	ft::list<int> mylist;
+//	ft::list<int>::iterator it;
+//
+//	for (int i = 0; i < 50000; i++) {
+//		mylist.push_back((int)rand() % 100000);
+//	}
+//
+////	mylist.push_back (2);
 //
 //	std::cout << (7 / 2) << std::endl;
 //	mylist.sort();
@@ -548,5 +603,35 @@ int main() {
 //	for (it=mylist.begin(); it!=mylist.end(); ++it)
 //		std::cout << ' ' << *it;
 //	std::cout << '\n';
+//	ft::List<std::string> mylist;
+//	ft::List<std::string>::iterator it;
+//	mylist.push_back ("one");
+//	mylist.push_back ("two");
+//	mylist.push_back ("Three");
+//
+//	mylist.sort();
+//
+//	std::cout << "mylist contains:";
+//	for (it=mylist.begin(); it!=mylist.end(); ++it)
+//		std::cout << ' ' << *it;
+//	std::cout << '\n';
+//
+//	mylist.sort(compare_nocase);
+//
+//	std::cout << "mylist contains:";
+//	for (it=mylist.begin(); it!=mylist.end(); ++it)
+//		std::cout << ' ' << *it;
+//	std::cout << '\n';
+
+
+//===================================================
+//======================VECTOR=======================
+//===================================================
+
+
+
+
+
+
 	return 0;
 }
