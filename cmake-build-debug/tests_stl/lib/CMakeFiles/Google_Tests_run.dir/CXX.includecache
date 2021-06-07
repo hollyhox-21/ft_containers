@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-../List.hpp
+../Vector.hpp
 memory
 -
 iterator
@@ -356,13 +356,13 @@ gtest/gtest.h
 general_fiction.hpp
 /Users/rjoella/Desktop/ft_containers/tests_stl/general_fiction.hpp
 
-/Users/rjoella/Desktop/ft_containers/tests_stl/list_test.cpp
-list_test_stuff.hpp
-/Users/rjoella/Desktop/ft_containers/tests_stl/list_test_stuff.hpp
+/Users/rjoella/Desktop/ft_containers/tests_stl/vector_test.cpp
+vector_test_stuff.hpp
+/Users/rjoella/Desktop/ft_containers/tests_stl/vector_test_stuff.hpp
 
-/Users/rjoella/Desktop/ft_containers/tests_stl/list_test_stuff.hpp
+/Users/rjoella/Desktop/ft_containers/tests_stl/vector_test_stuff.hpp
 general_test_stuff.hpp
 /Users/rjoella/Desktop/ft_containers/tests_stl/general_test_stuff.hpp
-List.hpp
-/Users/rjoella/Desktop/ft_containers/tests_stl/List.hpp
+Vector.hpp
+/Users/rjoella/Desktop/ft_containers/tests_stl/Vector.hpp
 

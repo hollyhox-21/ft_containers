@@ -14,11 +14,21 @@ iterator
 cstdio
 -
 
+/Users/rjoella/Desktop/ft_containers/Vector.hpp
+memory
+-
+iterator
+-
+cstdio
+-
+
 /Users/rjoella/Desktop/ft_containers/main.cpp
 iostream
 -
 List.hpp
 /Users/rjoella/Desktop/ft_containers/List.hpp
+Vector.hpp
+/Users/rjoella/Desktop/ft_containers/Vector.hpp
 list
 -
 string

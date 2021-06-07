@@ -118,10 +118,8 @@ namespace ft{
 		list (size_type n, const value_type& val = value_type(),
 			const allocator_type& alloc = allocator_type()) : _alloc_data(alloc), _size(0) {
 			_create_empty_list();
-			while (n > 0) {
+			for (int i = 0; i < n; --n)
 				push_front(val);
-				n--;
-			}
 		}
 		template <class InputIterator>
 		list (InputIterator first, InputIterator last,
@@ -317,17 +315,11 @@ namespace ft{
 //==================>>>END__Iterators<<<====================
 
 //==================>>>Capacity<<<====================
-		size_type size() const{
-			return _size;
-		}
+		size_type size() const{ return _size; }
 		
-		bool	empty() const{
-			return _size == 0 ? true : false;
-		}
+		bool	empty() const{ return _size == 0 ? true : false; }
 		
-		size_type max_size() const {
-			return UINT64_MAX / sizeof(t_Node);
-		}
+		size_type max_size() const { return UINT64_MAX / sizeof(t_Node); }
 //==================>>>END__Capacity<<<====================
 
 //==================>>>Element access<<<====================
