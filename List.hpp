@@ -47,7 +47,6 @@ namespace ft{
 		class				reverse_iterator;
 		class				const_reverse_iterator;
 		
-
 	private:
 		typedef struct			s_Node {
 			value_type			*_data;
@@ -138,7 +137,6 @@ namespace ft{
 		
 		~list() {
 			clear();
-//			_clear_node(_lock);
 		}
 		
 		list& operator= (const list& x) {

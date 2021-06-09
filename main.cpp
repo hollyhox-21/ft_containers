@@ -769,6 +769,7 @@ int main() {
 //
 //	myvector.insert (it,2,300);
 //
+//	myvector._print_vec();
 //	// "it" no longer valid, get a new one:
 //	it = myvector.begin();
 //
@@ -779,10 +780,53 @@ int main() {
 //	myvector.insert (myvector.begin(), myarray, myarray+3);
 //
 //	std::cout << "myvector contains:";
-//	for (it=myvector.begin(); it<myvector.end(); it++)
+//	for (it=myvector.begin(); it<myvector.end(); it++) {
 //		std::cout << ' ' << *it;
+//	}
 //	std::cout << '\n';
-//	myvector._print_vec();
+
+{
+	ft::vector<int> test;
+	int my_array[] = {501, 502, 503};
+	
+	test.insert(test.begin(), my_array, my_array + 3);
+	
+	ft::vector<int>::iterator it_test;
+	
+	it_test = test.insert(test.end(), 10);
+	
+	std::cout << *it_test << std::endl;
+	
+	ft::vector<int>::iterator _it = test.begin();
+	
+	std::cout << "myvector contains:";
+	for (_it = test.begin(); _it < test.end(); _it++) {
+		std::cout << ' ' << *_it;
+	}
+	std::cout << '\n';
+}
+{
+	std::vector<int> test;
+	int my_array[] = {501, 502, 503};
+	
+	test.insert(test.begin(), my_array, my_array + 3);
+	
+	std::vector<int>::iterator it_test;
+	
+	it_test = test.insert(test.end(), 10);
+	
+	std::cout << *it_test << std::endl;
+	
+	std::vector<int>::iterator _it = test.begin();
+	
+	std::cout << "myvector contains:";
+	for (_it = test.begin(); _it < test.end(); _it++) {
+		std::cout << ' ' << *_it;
+	}
+	std::cout << '\n';
+}
+
+
 //======================erase=========================
 //{
 //	std::vector<int> myvector;
@@ -879,7 +923,11 @@ int main() {
 //	}
 //======================construct==================
 //	ft::vector<int> first;                                // empty vector of ints
-//	ft::vector<int> second (4,100);                       // four ints with value 100
+//	ft::vector<int> second ;
+//	for (int i = 1; i < 5; ++i) {
+//		second.push_back(i);
+//	}// four ints with value 100
+//	second._print_vec();
 //	ft::vector<int> third (second.begin(),second.end());  // iterating through second
 //	ft::vector<int> fourth (third);                       // a copy of third
 //
@@ -916,10 +964,10 @@ int main() {
 //			std::cout << "capacity changed: " << sz << '\n';
 //		}
 //	}
-	ft::vector<int> test(1025, 100);
-	std::vector<int> std_test(1025, 100);
-	test._print_vec();
-	
-	print_cont(std_test);
+//	ft::vector<int> test(1025, 100);
+//	std::vector<int> std_test(1025, 100);
+//	test._print_vec();
+//
+//	print_cont(std_test);
 	return 0;
 }

@@ -258,6 +258,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/rjoella/Desktop/ft_containers/tests_stl/by_matrus_map.cpp">
+			<Option target="Google_Tests_run"/>
+		</Unit>
 		<Unit filename="/Users/rjoella/Desktop/ft_containers/tests_stl/general_stuff.cpp">
 			<Option target="Google_Tests_run"/>
 		</Unit>
@@ -273,13 +276,7 @@
 		<Unit filename="/Users/rjoella/Desktop/ft_containers/tests_stl/lib/googletest/googletest/src/gtest_main.cc">
 			<Option target="gtest_main"/>
 		</Unit>
-		<Unit filename="/Users/rjoella/Desktop/ft_containers/tests_stl/list_test.cpp">
-			<Option target="Google_Tests_run"/>
-		</Unit>
 		<Unit filename="/Users/rjoella/Desktop/ft_containers/tests_stl/test.cpp">
-			<Option target="Google_Tests_run"/>
-		</Unit>
-		<Unit filename="/Users/rjoella/Desktop/ft_containers/tests_stl/vector_test.cpp">
 			<Option target="Google_Tests_run"/>
 		</Unit>
 		<Unit filename="/Users/rjoella/Desktop/ft_containers/CMakeLists.txt">

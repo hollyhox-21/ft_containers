@@ -1,8 +1,7 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Google_Tests_run.dir/by_matrus_map.cpp.o"
   "CMakeFiles/Google_Tests_run.dir/general_stuff.cpp.o"
-  "CMakeFiles/Google_Tests_run.dir/list_test.cpp.o"
   "CMakeFiles/Google_Tests_run.dir/test.cpp.o"
-  "CMakeFiles/Google_Tests_run.dir/vector_test.cpp.o"
   "Google_Tests_run"
   "Google_Tests_run.pdb"
 )
